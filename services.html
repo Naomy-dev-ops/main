@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Bison Hygiene Ltd</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sapphire: '#0F4C81',
+            sapphireDark: '#0A3357',
+            accentYellow: '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Top Announcement / Contact Bar -->
+  <div class="bg-sapphireDark text-white py-2 px-4 text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid font-bold fa-location-dot text-accentYellow mr-1"></i> Serving Nairobi, Mombasa & Kilifi</span>
+        <span class="hidden sm:inline">|</span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-clock text-accentYellow mr-1"></i> 24/7 Service Available</span>
+      </div>
+      <div class="flex items-center gap-4 font-semibold text-xs sm:text-sm">
+        <a href="tel:+254720581542" class="hover:text-accentYellow transition"><i class="fa-solid fa-phone mr-1"></i> Nairobi: 0720 581 542</a>
+        <a href="tel:+254726268335" class="hover:text-accentYellow transition hidden sm:inline"><i class="fa-solid fa-phone mr-1"></i> Mombasa/Kilifi: 0726 268 335</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="images/logo.jpg" alt="Bison Hygiene Logo" class="w-12 h-12 object-contain">
+        <div>
+          <a href="index.html" class="text-xl font-extrabold text-sapphire tracking-tight block leading-none">BISON HYGIENE</a>
+          <span class="text-xs text-gray-500 font-medium tracking-widest uppercase">Maintenance Services</span>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+        <a href="index.html" class="hover:text-sapphire">Home</a>
+        <a href="services.html" class="text-sapphire font-bold">Our Services</a>
+        <a href="karen hub.html" class="hover:text-sapphire">Karen Hub</a>
+        <a href="index.html#about" class="hover:text-sapphire">About Us</a>
+        <a href="#contact" class="hover:text-sapphire">Contact</a>
+      </div>
+      <a href="https://wa.me/254720581542?text=Hello%20Bison%20Hygiene,%20I%20would%20like%20to%20request%20a%20quotation." 
+         target="_blank" 
+         class="bg-accentYellow hover:bg-yellow-500 text-gray-900 px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-sm transition">
+        <i class="fa-solid fa-file-invoice-dollar text-lg"></i> Get a Quote
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="bg-sapphire text-white py-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-block bg-amber-400/20 text-accentYellow border border-amber-400/30 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+        You Choose it! We Clean it!
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Professional Services</h1>
+      <p class="text-blue-100 text-lg">Dedicated, comprehensive cleaning solutions tailored to your specific commercial and residential standards.</p>
+    </div>
+  </section>
+
+  <!-- 3-Column Services Grid with Clearer Background Images -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- 1. Office Cleaning -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/office.jpg');">
+        <!-- Lighter overlay for clearer background visibility -->
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-building"></i> Office Cleaning Services
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            Providing professional office cleaning services in Nairobi at affordable rates. Our commercial cleaning includes:
+          </p>
+          <ol class="space-y-1.5 text-gray-100 text-xs sm:text-sm list-decimal list-inside font-medium drop-shadow">
+            <li>Daily office cleaners: daily visits or when needed.</li>
+            <li>Janitorial supplies, washroom services and hygiene.</li>
+            <li>Commercial carpet cleaning and maintenance.</li>
+            <li>Hard floor cleaning, buffing, stripping, and sealing.</li>
+            <li>Industrial cleaning, move in/out deep cleans.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 2. Carpet Cleaning -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/carpet.jpg');">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-rug"></i> Carpet Cleaning Services
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            We offer matchless carpet steam cleaning services in Nairobi. We provide quick, convenient, and hassle-free carpet cleaning. Your home is back to normal in a flash.
+          </p>
+          <p class="text-gray-100 text-sm leading-relaxed font-medium drop-shadow">
+            Rugs require professional cleaning on a regular basis in order to maintain their beauty and value in an effective way. We possess the right expertise and state-of-the-art equipment.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Sofa Set Cleaning -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/sofa.jpg');">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-couch"></i> Sofa Set Cleaning Services
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            We vacuum the entire sofa set before steam begins to remove loose dirt and dust particles, giving us a fresh canvas.
+          </p>
+          <p class="text-gray-100 text-sm leading-relaxed font-medium drop-shadow">
+            We fire up our steam cleaning machine and spray stain removal and shampoos to work stains out from deep fibers without damage.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Mattress Cleaning -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/mattress.jpg');">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-bed"></i> Mattress Cleaning Services
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            We provide professional mattress cleaning & sanitizing services, getting rid of harmful dust and contaminants that accumulate over time.
+          </p>
+          <p class="text-gray-100 text-sm leading-relaxed font-medium drop-shadow">
+            We provide our clients with a 100% satisfaction guarantee. Unhappy with results? Our technicians will redo it until you say "Yes, I am content".
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. Post Construction Cleaning -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/post construction.jpg');">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-helmet-safety"></i> Post Construction Cleaning
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            Take advantage of our affordable post-construction cleaning services. Steps to Post-Construction Cleaning:
+          </p>
+          <ol class="space-y-1 text-gray-100 text-xs sm:text-sm list-decimal list-inside font-medium drop-shadow">
+            <li>Debris Removal.</li>
+            <li>Wall Washing.</li>
+            <li>High-Dust Cleaning.</li>
+            <li>Vacuuming, Sweeping, and Mopping.</li>
+            <li>Door Frame, Baseboard, and Blind Cleaning.</li>
+            <li>Residential, Commercial, and School Construction.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 6. Housekeeping Services -->
+      <div class="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl border border-white/20 p-8 flex flex-col justify-between min-h-[420px]" style="background-image: url('images/house keeping.jpg');">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-white">
+          <h3 class="text-2xl font-extrabold text-amber-300 mb-4 flex items-center gap-2 drop-shadow-md">
+            <i class="fa-solid fa-house-chimney"></i> Housekeeping Services
+          </h3>
+          <p class="text-gray-100 text-sm leading-relaxed mb-4 font-medium drop-shadow">
+            We provide dedicated house cleaners. We don’t have predetermined cleaning packages; we believe in Personalized Cleaning.
+          </p>
+          <p class="text-gray-100 text-sm leading-relaxed font-medium drop-shadow">
+            "We care for your home like it was our own". Our hard working service providers arrive on time, are extremely courteous, and respect your privacy.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quotation Banner Call to Action -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+    <div class="bg-sapphireDark text-white rounded-2xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 border-l-8 border-accentYellow">
+      <div>
+        <h2 class="text-3xl font-bold mb-3">Ready for a Custom Cleaning Plan?</h2>
+        <p class="text-gray-300 max-w-2xl leading-relaxed">
+          Contact our team today to get an exact quotation tailored to your premises, requirements, and budget.
+        </p>
+      </div>
+      <a href="https://wa.me/254720581542?text=Hello%20Bison%20Hygiene,%20I%20would%20like%20to%20request%20a%20quotation%20for%20your%20services." target="_blank" class="bg-accentYellow hover:bg-yellow-500 text-gray-900 font-bold py-3.5 px-8 rounded-lg shadow-lg transition whitespace-nowrap">
+        Request Quotation via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer id="contact" class="bg-sapphireDark text-white pt-12 pb-6 px-4 mt-16 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-700 pb-8">
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-accentYellow">Bison Hygiene Ltd</h4>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Professional Cleaning & Maintenance Services. Any Industry! Any Building, NAIROBI & MOMBASA/KILIFI.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-accentYellow">Contact Information</h4>
+        <p class="text-gray-300 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Nairobi: 0720 581 542 | 0780 581 542</p>
+        <p class="text-gray-300 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Mombasa/Kilifi: 0726 268 335 | 0785 973 828</p>
+        <p class="text-gray-300 text-sm"><i class="fa-solid fa-envelope mr-2 text-accentYellow"></i> Free Estimates Available</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-accentYellow">Connect With Us</h4>
+        <div class="flex space-x-4 text-2xl">
+          <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-400">
+      © 2026 Bison Hygiene Ltd. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
