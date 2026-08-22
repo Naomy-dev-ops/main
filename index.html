@@ -21,18 +21,18 @@
   </script>
 </head>
 <body class="bg-transparent text-gray-800 font-sans antialiased">
-
+  
   <!-- Top Announcement / Contact Bar -->
   <div class="bg-sapphireDark text-white py-2 px-4 text-sm">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 flex-wrap justify-center md:justify-start">
         <span><i class="fa-solid font-bold fa-location-dot text-accentYellow mr-1"></i> Serving Nairobi & Karen Region</span>
         <span class="hidden sm:inline">|</span>
         <span class="hidden sm:inline"><i class="fa-solid fa-clock text-accentYellow mr-1"></i> 24/7 Service Available</span>
       </div>
-      <div class="flex items-center gap-4 font-semibold text-xs sm:text-sm">
-        <a href="tel:+254720581542" class="hover:text-accentYellow transition"><i class="fa-solid fa-phone mr-1"></i> Nairobi: 0720 581 542</a>
-        <a href="tel:+254726268335" class="hover:text-accentYellow transition hidden sm:inline"><i class="fa-solid fa-phone mr-1"></i> Mombasa/Kilifi: 0726 268 335</a>
+      <div class="flex items-center gap-2 md:gap-4 font-semibold text-xs sm:text-sm flex-wrap justify-center">
+        <a href="tel:+254720581542" class="hover:text-accentYellow transition"><i class="fa-solid fa-phone mr-1"></i> 0720 581 542</a>
+        <a href="tel:+254726268335" class="hover:text-accentYellow transition hidden sm:inline"><i class="fa-solid fa-phone mr-1"></i> 0726 268 335</a>
       </div>
     </div>
   </div>
@@ -44,10 +44,12 @@
         <!-- Logo updated to .JPG -->
         <img src="images/logo.JPG" alt="Bison Hygiene Logo" class="w-12 h-12 object-contain">
         <div>
-          <span class="text-xl font-extrabold text-sapphire tracking-tight block leading-none">BISON HYGIENE</span>
+          <span class="text-lg md:text-xl font-extrabold text-sapphire tracking-tight block leading-none">BISON HYGIENE</span>
           <span class="text-xs text-gray-500 font-medium tracking-widest uppercase">Maintenance Services</span>
         </div>
       </div>
+      
+      <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-6 font-medium text-gray-700">
         <a href="index.html" class="text-sapphire font-bold">Home</a>
         <a href="services.html" class="hover:text-sapphire">Our Services</a>
@@ -55,33 +57,51 @@
         <a href="about us.html" class="hover:text-sapphire">About Us</a>
         <a href="contact us.html" class="hover:text-sapphire">Contact Us</a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden flex flex-col gap-1.5 mr-4 focus:outline-none">
+        <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+        <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+        <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+      </button>
+
+      <!-- WhatsApp Button -->
       <a href="https://wa.me/254720581542?text=Hello%20Bison%20Hygiene,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
          target="_blank" 
-         class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 shadow-sm transition">
-        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
+         class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 md:px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 shadow-sm transition text-sm md:text-base">
+        <i class="fa-brands fa-whatsapp text-lg"></i> <span class="hidden sm:inline">WhatsApp Us</span>
       </a>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-3">
+      <a href="index.html" class="block text-sapphire font-bold hover:bg-gray-100 px-3 py-2 rounded">Home</a>
+      <a href="services.html" class="block text-gray-700 hover:text-sapphire hover:bg-gray-100 px-3 py-2 rounded">Our Services</a>
+      <a href="karen hub.html" class="block text-gray-700 hover:text-sapphire hover:bg-gray-100 px-3 py-2 rounded">Karen Hub</a>
+      <a href="about us.html" class="block text-gray-700 hover:text-sapphire hover:bg-gray-100 px-3 py-2 rounded">About Us</a>
+      <a href="contact us.html" class="block text-gray-700 hover:text-sapphire hover:bg-gray-100 px-3 py-2 rounded">Contact Us</a>
     </div>
   </nav>
 
   <!-- Hero Section with Background Image -->
-  <section id="home" class="relative bg-cover bg-center text-white py-20 px-4 transition-all duration-1000 ease-in-out" 
+  <section id="home" class="relative bg-cover bg-center text-white py-16 md:py-20 px-4 transition-all duration-1000 ease-in-out" 
            style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/background.JPG');">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
       <div>
-        <span class="inline-block bg-amber-400/20 text-accentYellow border border-amber-400/30 px-3 py-1 rounded-full text-sm font-semibold mb-4 backdrop-blur-sm">
+        <span class="inline-block bg-amber-400/20 text-accentYellow border border-amber-400/30 px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-4 backdrop-blur-sm">
           Any Industry! Any Building!
         </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 drop-shadow-md">
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6 drop-shadow-md">
           Professional Cleaning & Facility Maintenance Services
         </h1>
-        <p class="text-gray-100 text-lg mb-8 leading-relaxed drop-shadow-md font-medium">
+        <p class="text-gray-100 text-base md:text-lg mb-8 leading-relaxed drop-shadow-md font-medium">
           From sparkling homes to spotless offices, Bison Hygiene cleans it all! We are committed to providing customizable cleaning options designed to meet your specific needs.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="contact us.html" class="bg-accentYellow hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3.5 rounded-lg text-center transition shadow-lg">
+          <a href="contact us.html" class="bg-accentYellow hover:bg-yellow-500 text-gray-900 font-bold px-6 md:px-8 py-3 md:py-3.5 rounded-lg text-center transition shadow-lg text-sm md:text-base">
             Request a Free Quote
           </a>
-          <a href="services.html" class="border-2 border-white/80 hover:bg-white/20 text-white font-bold px-8 py-3.5 rounded-lg text-center transition backdrop-blur-sm">
+          <a href="services.html" class="border-2 border-white/80 hover:bg-white/20 text-white font-bold px-6 md:px-8 py-3 md:py-3.5 rounded-lg text-center transition backdrop-blur-sm text-sm md:text-base">
             Explore Services
           </a>
         </div>
@@ -89,12 +109,12 @@
       
       <!-- Featured Highlight Box -->
       <div class="bg-black/30 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
-        <h3 class="text-2xl font-bold mb-4 text-white drop-shadow-sm">Award-Winning Service</h3>
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-white drop-shadow-sm">Award-Winning Service</h3>
         <div class="p-4 bg-sapphireDark/90 rounded-xl mb-4 border-l-4 border-accentYellow shadow-inner">
-          <h4 class="font-bold text-accentYellow text-lg"><i class="fa-solid fa-trophy mr-2"></i> Women in Business Awards</h4>
-          <p class="text-sm text-gray-300 mt-1">2023 Winners for Commercial & Domestic Cleaning.</p>
+          <h4 class="font-bold text-accentYellow text-base md:text-lg"><i class="fa-solid fa-trophy mr-2"></i> Women in Business Awards</h4>
+          <p class="text-xs md:text-sm text-gray-300 mt-1">2023 Winners for Commercial & Domestic Cleaning.</p>
         </div>
-        <ul class="space-y-3 text-sm text-gray-100 font-medium">
+        <ul class="space-y-3 text-xs md:text-sm text-gray-100 font-medium">
           <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accentYellow"></i> KRA Tax Compliant Certified</li>
           <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accentYellow"></i> Trained & Vetted Support Staff</li>
           <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accentYellow"></i> Safe & Eco-Friendly Sanitation Products</li>
@@ -106,17 +126,17 @@
   <!-- Services Grid Section -->
   <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-extrabold text-sapphire">Our Comprehensive Services</h2>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-sapphire">Our Comprehensive Services</h2>
       <p class="text-gray-600 mt-2">You Choose it! We Clean it!</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
       <!-- Category 1: Commercial & Residential -->
       <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
         <div class="w-12 h-12 bg-blue-100 text-sapphire rounded-lg flex items-center justify-center text-xl font-bold mb-4">
           <i class="fa-solid fa-building"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Commercial & Residential</h3>
+        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Commercial & Residential</h3>
         <ul class="space-y-2 text-gray-600 text-sm mb-4">
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Office Cleaning</li>
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Home Cleaning</li>
@@ -132,7 +152,7 @@
         <div class="w-12 h-12 bg-blue-100 text-sapphire rounded-lg flex items-center justify-center text-xl font-bold mb-4">
           <i class="fa-solid fa-couch"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Fabrics & Furnishings</h3>
+        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Fabrics & Furnishings</h3>
         <ul class="space-y-2 text-gray-600 text-sm mb-4">
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Carpet Cleaning</li>
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Sofa Cleaning</li>
@@ -148,7 +168,7 @@
         <div class="w-12 h-12 bg-blue-100 text-sapphire rounded-lg flex items-center justify-center text-xl font-bold mb-4">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Specialized & Hygiene</h3>
+        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Specialized & Hygiene</h3>
         <ul class="space-y-2 text-gray-600 text-sm mb-4">
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Fumigation</li>
           <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i>Sanitary Bins</li>
@@ -165,23 +185,23 @@
   <section id="about" class="py-16 px-4 bg-sapphire/5">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-extrabold text-sapphire">Welcome to Bison</h2>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-sapphire">Welcome to Bison</h2>
         <a href="about us.html" class="inline-block mt-3 text-sapphire font-semibold hover:underline">Learn more about our company profile &rarr;</a>
       </div>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <h3 class="text-2xl font-bold text-sapphire mb-4"><i class="fa-solid fa-bullseye text-accentYellow mr-2"></i>Our Mission</h3>
-          <p class="text-gray-700 leading-relaxed mb-6">
-            Our mission is to empower individuals and businesses to thrive in clean, healthy, and well-maintained environments. We achieve this through exceptional cleaning services, personalized solu[...]
+      <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="text-xl md:text-2xl font-bold text-sapphire mb-4"><i class="fa-solid fa-bullseye text-accentYellow mr-2"></i>Our Mission</h3>
+          <p class="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
+            Our mission is to empower individuals and businesses to thrive in clean, healthy, and well-maintained environments. We achieve this through exceptional cleaning services, personalized[...]
           </p>
-          <h3 class="text-2xl font-bold text-sapphire mb-4"><i class="fa-solid fa-eye text-accentYellow mr-2"></i>Our Vision</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Our vision is to become Kenya's leading provider of cleaning and maintenance services, recognized for our unwavering dedication to quality, customer satisfaction, and the creation of prist[...]
+          <h3 class="text-xl md:text-2xl font-bold text-sapphire mb-4"><i class="fa-solid fa-eye text-accentYellow mr-2"></i>Our Vision</h3>
+          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+            Our vision is to become Kenya's leading provider of cleaning and maintenance services, recognized for our unwavering dedication to quality, customer satisfaction, and the creation of [...]
           </p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <h3 class="text-2xl font-bold text-sapphire mb-4"><i class="fa-regular fa-star text-accentYellow mr-2"></i>Our Values</h3>
-          <ul class="space-y-4 text-gray-700">
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="text-xl md:text-2xl font-bold text-sapphire mb-4"><i class="fa-regular fa-star text-accentYellow mr-2"></i>Our Values</h3>
+          <ul class="space-y-4 text-gray-700 text-sm md:text-base">
             <li><strong>Excellence:</strong> We are committed to delivering the highest standard of clean, exceeding our clients' expectations in every service we provide.</li>
             <li><strong>Integrity:</strong> We operate with honesty, transparency, and ethical business practices in all our interactions.</li>
             <li><strong>Customer Focus:</strong> We prioritize our clients' needs, building strong relationships based on personalized service and clear communication.</li>
@@ -194,22 +214,22 @@
 
   <!-- Scheduling & Pricing Section -->
   <section class="py-16 px-4 max-w-7xl mx-auto">
-    <div class="bg-sapphire text-white rounded-2xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 border-b-8 border-accentYellow">
+    <div class="bg-sapphire text-white rounded-2xl p-6 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 border-b-8 border-accentYellow">
       <div class="md:w-2/3">
-        <h2 class="text-3xl font-bold mb-4">Flexible Scheduling & AMC Plans</h2>
-        <p class="text-blue-100 mb-4 leading-relaxed">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Flexible Scheduling & AMC Plans</h2>
+        <p class="text-blue-100 mb-4 leading-relaxed text-sm md:text-base">
           Pick the days and times that work best for you! Choose from daily, weekly, bi-weekly, monthly, or one-time cleaning. We are flexible so you don't have to worry!
         </p>
-        <p class="text-blue-100 font-semibold mb-4">
+        <p class="text-blue-100 font-semibold mb-4 text-sm md:text-base">
           <i class="fa-solid fa-file-contract text-accentYellow mr-2"></i> We also offer an Annual Maintenance Contract (AMC) for all our services!
         </p>
       </div>
-      <div class="md:w-1/3 text-center bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20">
-        <h3 class="text-xl font-bold text-accentYellow mb-2">Pricing</h3>
-        <p class="text-sm text-gray-200 mb-4">
+      <div class="md:w-1/3 text-center bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/20 w-full">
+        <h3 class="text-lg md:text-xl font-bold text-accentYellow mb-2">Pricing</h3>
+        <p class="text-xs md:text-sm text-gray-200 mb-4">
           Call us for a FREE ESTIMATE. Our professionally trained Executives will develop a customized cleaning plan to meet your budget and needs.
         </p>
-        <a href="contact us.html" class="inline-block bg-accentYellow hover:bg-yellow-500 text-sapphireDark font-bold py-2 px-6 rounded-lg transition w-full">Get Your Quote</a>
+        <a href="contact us.html" class="inline-block bg-accentYellow hover:bg-yellow-500 text-sapphireDark font-bold py-2 px-6 rounded-lg transition w-full text-sm md:text-base">Get Your Quote</a>
       </div>
     </div>
   </section>
@@ -217,26 +237,26 @@
   <!-- Our Referees Section -->
   <section class="py-16 px-4 bg-transparent border-t border-gray-200">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-extrabold text-sapphire mb-8">Our Referees</h2>
-      <p class="text-gray-600 mb-10">Trusted by leading organizations across Kenya</p>
-      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-sapphire mb-8">Our Referees</h2>
+      <p class="text-gray-600 mb-10 text-sm md:text-base">Trusted by leading organizations across Kenya</p>
+      <div class="flex flex-wrap justify-center items-center gap-4 md:gap-10">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
           <img src="images/kicc.JPG" alt="KICC" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
           <img src="images/java.JPG" alt="Java House" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
           <img src="images/supreme.JPG" alt="Supreme Court of Kenya" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
           <img src="images/kenya army.JPG" alt="Kenya Army" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
           <img src="images/gems.JPG" alt="GEMS Cambridge" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-32 h-32 flex items-center justify-center">
-          <span class="font-extrabold text-xl text-gray-500">GIZ</span>
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition w-24 h-24 md:w-32 md:h-32 flex items-center justify-center">
+          <span class="font-extrabold text-lg md:text-xl text-gray-500">GIZ</span>
         </div>
       </div>
     </div>
@@ -246,8 +266,8 @@
   <footer id="contact" class="bg-sapphireDark text-white pt-12 pb-6 px-4">
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-700 pb-8">
       <div>
-        <h4 class="text-lg font-bold mb-4 text-accentYellow">Bison Hygiene Ltd</h4>
-        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+        <h4 class="text-base md:text-lg font-bold mb-4 text-accentYellow">Bison Hygiene Ltd</h4>
+        <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-4">
           Professional Cleaning & Maintenance Services. Any Industry! Any Building, NAIROBI & MOMBASA/KILIFI.
         </p>
         <div class="flex flex-wrap gap-2 text-xs">
@@ -259,14 +279,14 @@
         </div>
       </div>
       <div>
-        <h4 class="text-lg font-bold mb-4 text-accentYellow">Contact Information</h4>
-        <p class="text-gray-300 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Nairobi: 0720 581 542 | 0780 581 542</p>
-        <p class="text-gray-300 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Mombasa/Kilifi: 0726 268 335 | 0785 973 828</p>
-        <p class="text-gray-300 text-sm"><i class="fa-solid fa-envelope mr-2 text-accentYellow"></i> Free Estimates Available</p>
+        <h4 class="text-base md:text-lg font-bold mb-4 text-accentYellow">Contact Information</h4>
+        <p class="text-gray-300 text-xs md:text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Nairobi: 0720 581 542 | 0780 581 542</p>
+        <p class="text-gray-300 text-xs md:text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-accentYellow"></i> Mombasa/Kilifi: 0726 268 335 | 0785 973 828</p>
+        <p class="text-gray-300 text-xs md:text-sm"><i class="fa-solid fa-envelope mr-2 text-accentYellow"></i> Free Estimates Available</p>
       </div>
       <div>
-        <h4 class="text-lg font-bold mb-4 text-accentYellow">Connect With Us</h4>
-        <div class="flex space-x-4 text-2xl">
+        <h4 class="text-base md:text-lg font-bold mb-4 text-accentYellow">Connect With Us</h4>
+        <div class="flex space-x-4 text-2xl justify-center md:justify-start">
           <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-facebook"></i></a>
           <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="hover:text-accentYellow"><i class="fa-brands fa-x-twitter"></i></a>
@@ -278,9 +298,10 @@
     </div>
   </footer>
 
-  <!-- Javascript for Background Slideshow -->
+  <!-- Javascript for Background Slideshow and Mobile Menu Toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // Background Slideshow
       const heroSection = document.getElementById('home');
       
       const backgrounds = [
@@ -295,6 +316,22 @@
         currentIndex = (currentIndex + 1) % backgrounds.length;
         heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), ${backgrounds[currentIndex]}`;
       }, 5000);
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when a link is clicked
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
     });
   </script>
 
