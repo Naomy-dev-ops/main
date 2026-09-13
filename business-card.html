@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bison Hygiene - Business Card with QR Code</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0F4C81 0%, #0A3357 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    .business-card {
+      width: 100%;
+      max-width: 900px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card-left {
+      background: linear-gradient(135deg, #0F4C81 0%, #0A3357 100%);
+      padding: 40px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-logo {
+      margin-bottom: 30px;
+    }
+
+    .card-logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .card-brand {
+      margin-bottom: 40px;
+    }
+
+    .card-brand h1 {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .card-brand p {
+      font-size: 12px;
+      color: #F59E0B;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .card-contact {
+      space-y: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+
+    .contact-item i {
+      width: 18px;
+      color: #F59E0B;
+      flex-shrink: 0;
+    }
+
+    .contact-item-label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      opacity: 0.9;
+    }
+
+    .contact-item-text {
+      font-size: 11px;
+    }
+
+    .card-right {
+      background: #f8f8f8;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .qr-code-container {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #qrcode {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #qrcode img {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+    .qr-text {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      font-weight: 600;
+    }
+
+    .accent-bar {
+      width: 30px;
+      height: 3px;
+      background: #F59E0B;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .business-card {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .card-left {
+        padding: 30px;
+      }
+
+      .card-right {
+        padding: 30px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .card-brand h1 {
+        font-size: 18px;
+      }
+    }
+
+    .print-button {
+      background: #0F4C81;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+
+    .print-button:hover {
+      background: #0A3357;
+    }
+
+    .download-button {
+      background: #F59E0B;
+      color: #0F4C81;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .download-button:hover {
+      background: #f0930b;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .business-card {
+        box-shadow: none;
+        max-width: none;
+        width: 100%;
+      }
+
+      .print-button,
+      .download-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="w-full max-w-4xl">
+    <div class="business-card" id="businessCard">
+      <!-- Left Side -->
+      <div class="card-left">
+        <div>
+          <div class="card-logo">
+            <img src="images/logo.JPG" alt="Bison Hygiene Logo">
+          </div>
+          <div class="card-brand">
+            <h1>BISON HYGIENE</h1>
+            <p>MAINTENANCE SERVICES</p>
+          </div>
+          <div class="accent-bar"></div>
+        </div>
+
+        <div class="card-contact">
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="contact-item-label">NAIROBI</span>
+              <span class="contact-item-text">0720 581 542 | 0780 581 542</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="contact-item-label">MOMBASA/KILIFI</span>
+              <span class="contact-item-text">0726 268 335 | 0785 973 828</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="contact-item-label">SERVICE AREA</span>
+              <span class="contact-item-text">Nairobi, Mombasa & Kilifi</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <span class="contact-item-label">AVAILABILITY</span>
+              <span class="contact-item-text">24/7 Service Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="card-right">
+        <div>
+          <div class="text-center mb-4">
+            <h3 class="font-bold text-gray-800 mb-2 text-sm">Scan to Visit</h3>
+            <div class="accent-bar mx-auto"></div>
+          </div>
+        </div>
+
+        <div class="qr-code-container">
+          <div id="qrcode"></div>
+        </div>
+
+        <div class="qr-text">
+          <p>Scan QR Code to visit our website</p>
+          <p class="mt-1 text-xs opacity-75">www.bisonhygiene.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="text-center mt-8 flex gap-4 justify-center flex-wrap">
+      <button class="print-button" onclick="window.print()">
+        <i class="fa-solid fa-print mr-2"></i> Print Business Card
+      </button>
+      <button class="download-button" onclick="downloadAsImage()">
+        <i class="fa-solid fa-download mr-2"></i> Download as Image
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Generate QR Code
+    window.onload = function() {
+      // Replace with your actual website URL
+      const websiteUrl = "https://naomy-dev-ops.github.io/main/";
+      
+      const qrcodeElement = document.getElementById("qrcode");
+      qrcodeElement.innerHTML = ""; // Clear any existing QR code
+      
+      new QRCode(qrcodeElement, {
+        text: websiteUrl,
+        width: 180,
+        height: 180,
+        colorDark: "#0F4C81",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    };
+
+    // Download as Image
+    function downloadAsImage() {
+      const card = document.getElementById('businessCard');
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Business card dimensions (3.5" x 2" at 300 DPI)
+      const width = 1050;
+      const height = 600;
+      
+      canvas.width = width;
+      canvas.height = height;
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, width, height);
+      
+      // Create a temporary div to render HTML to canvas
+      html2canvas(card, {
+        width: width,
+        height: height,
+        scale: 2,
+        backgroundColor: null
+      }).then(tempCanvas => {
+        const link = document.createElement('a');
+        link.href = tempCanvas.toDataURL('image/png');
+        link.download = 'Bison_Hygiene_BusinessCard.png';
+        link.click();
+      }).catch(() => {
+        alert('For best results, please use the Print option and save as PDF.');
+      });
+    }
+  </script>
+
+  <!-- HTML to Canvas Library (for download functionality) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
